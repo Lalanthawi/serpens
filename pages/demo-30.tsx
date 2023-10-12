@@ -26,7 +26,7 @@ const Demo30: NextPage = () => {
           style={{ zIndex: 1 }}
         >
           <div className="container py-2 text-center">
-            <p className="mb-0">✨ This is a Placeholder</p>
+            <p className="mb-0">✨ We’re hiring now</p>
           </div>
         </div>
 
