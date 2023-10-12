@@ -1,7 +1,8 @@
-module.exports = {
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
-  output: "standalone",
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // swcMinify: true,
+  reactStrictMode: false,
+  transpilePackages: ['countup.js', 'react-countup'],
 };
+
+module.exports = nextConfig;

@@ -1,65 +1,84 @@
-<p align="center">
- <a href="https://web3templates.com/?ref=nextly_github_logo">
- <img src="https://user-images.githubusercontent.com/1884712/132941531-0fdd7acf-47ca-424e-b77f-1fab2e372a37.png" alt="W3T" width="100" height="41"/>
- </a> 
- <br>
- <br>
-</p>
+# Sandbox React
 
-# Nextly - Landing Page Template with Next.js & Tailwind CSS
+<p><strong>Important note:</strong> This is an React/Next.js template not a WP theme. Please make sure you need the React/Next.js version before purchasing. We can’t be held responsible for wrong purchases, we won’t be providing any refunds for purchases by mistake.</p>
 
-Nextly is a free landing page & marketing website template for  startups and indie projects. Its built with Next.js & TailwindCSS.
-And its completely open-source.
- 
-![image](https://user-images.githubusercontent.com/1884712/121497169-03228680-c990-11eb-975a-e77fddc43de0.png)
+<p>Sandbox is a beautiful and flawless site template that includes numerous UI elements and features, elegant ready-made blocks and rich pages, and everything else you need to create a unique and professional website. Sandbox React landing pages can be used for your React app. It’s super easy to set up and deploy.</p>
 
-## How to use
-
-Click on the [Use Template](https://github.com/surjithctly/nextly-template/generate) button on this page to clone this respository to your github account. Or you can also clone this respository using terminal or bash. 
-
-### 1\. Clone this Repository
-
-```bash
-git clone https://github.com/surjithctly/nextly-template.git
-```
-
-### 2\. Navigate to the directory
-
-```
-cd nextly-template
-```
-
-### 3\. Install dependencies
-
-```
-yarn install
-# or
-npm install
-```
-
-### 5\. Run Dev Server
-
-```
-yarn dev
-# or
-npm run dev
-```
-
-## Deploy with Vercel
-
-Deploy this template using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/surjithctly/nextly-template&project-name=nextly-template&repository-name=nextly-template)
+<p>Create and manage a visually appealing and impressive portfolio quickly and easily. Make an eye-catching journal to share your amazing stories with the world.</p>
 
 
-## Author
-
-Surjith S M ( [@surjithctly](https://surjithctly.in/) )
-
----
-
-[![image](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)](https://vercel.com/?utm_source=web3templates&utm_campaign=oss)
-
-
-
-
+<ul>
+<li>Next.js &amp; Bootstrap 5 &amp; SASS
+</li>
+<li>SCSS files included
+</li>
+<li>SEO-ready commented HTML5 files
+</li>
+<li>Thorough <a href="https://sandbox-react.netlify.app/docs" rel="nofollow">help documentation</a> with code snippets
+</li>
+<li>Well-written code
+</li>
+<li>Responsive layout
+</li>
+<li>Retina-ready
+</li>
+<li>Modern design
+</li>
+<li>Multipurpose usage: Demos for startup, business, SaaS, software, SEO, marketing, agency, portfolio, personal blog, journal, shop, ecommerce, photography, wedding, travel, etc
+</li>
+<li>Google fonts
+</li>
+<li>27 unique home pages and landing pages
+</li>
+<li>Free updates
+</li>
+<li>250+ beautiful UI elements
+</li>
+<li>130+ pre-made ready to use blocks
+</li>
+<li>100+ neatly coded pages
+</li>
+<li>Modern and eye-catching portfolio layouts
+</li>
+<li>Onepage layout option with smooth scroll
+</li>
+<li>Handcrafted and carefully put together inner pages to choose from
+</li>
+<li>Color options
+</li>
+<li>Font options
+</li>
+<li>High quality retina ready icon sets
+</li>
+<li>Image background option
+</li>
+<li>Video background option
+</li>
+<li>Various header and menu options
+</li>
+<li>Offcanvas mobile menu and info panel
+</li>
+<li>Mega menu with light and dark options
+</li>
+<li>Sticky header
+</li>
+<li>Sticky footer
+</li>
+<li>Notification bar
+</li>
+<li>Modal popup
+</li>
+<li>Animations on scroll
+</li>
+<li>Swiper.js
+</li>
+<li>Slider with animated captions
+</li>
+<li>Filterable gallery with Isotope.js
+</li>
+<li>Video player HTML5, YouTube and Vimeo video support with Plyr
+</li>
+<li>Lightbox for images and videos
+</li>
+<li>Top-notch support. <a href="https://support.ui-lib.com/">Contact Support</a></li>
+</ul>
