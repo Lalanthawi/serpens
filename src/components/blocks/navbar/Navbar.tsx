@@ -122,7 +122,10 @@ const Navbar: FC<NavbarProps> = (props) => {
                 <li className="mega-menu-content mega-menu-scroll">
                   <ul className="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled"></ul>
 
-                  <span className="d-none d-lg-flex"></span>
+                  <span className="d-none d-lg-flex">
+                    <i className="uil uil-direction" />
+                    <strong>Scroll to view more</strong>
+                  </span>
                 </li>
               </ul>
             </li>
@@ -273,12 +276,12 @@ const Navbar: FC<NavbarProps> = (props) => {
           <div className="offcanvas-footer d-lg-none">
             <div>
               <NextLink
-                title="info@email.com"
+                title="hello@teamserpens.com"
                 className="link-inverse"
-                href="mailto:first.last@email.com"
+                href="mailto:hello@teamserpens.com"
               />
               <br />
-              <NextLink href="tel:0123456789" title="00 (123) 456 78 90" />
+              <NextLink href="tel:0123456789" title="+(94) 777 14 24 33" />
               <br />
               <SocialLinks />
             </div>

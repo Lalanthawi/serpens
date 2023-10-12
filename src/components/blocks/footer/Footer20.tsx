@@ -59,7 +59,9 @@ const Footer20: FC = () => {
                   5000+ clients. Join them by using our services and grow your
                   business.
                 </p>
-                <p className="mb-1">© 2023 Sandbox. All rights reserved.</p>
+                <p className="mb-1">
+                  © 2023 Serpens Technologies. All rights reserved.
+                </p>
 
                 <SocialLinks className="nav social social-white" />
               </div>

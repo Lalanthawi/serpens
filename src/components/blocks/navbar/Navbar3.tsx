@@ -1,15 +1,20 @@
-import Link from 'next/link';
-import LinkType from 'types/link';
-import { FC, Fragment, useRef } from 'react';
+import Link from "next/link";
+import LinkType from "types/link";
+import { FC, Fragment, useRef } from "react";
 // -------- custom hook -------- //
-import useSticky from 'hooks/useSticky';
+import useSticky from "hooks/useSticky";
 // -------- custom component -------- //
-import NextLink from 'components/reuseable/links/NextLink';
-import SocialLinks from 'components/reuseable/SocialLinks';
-import ListItemLink from 'components/reuseable/links/ListItemLink';
-import DropdownToggleLink from 'components/reuseable/links/DropdownToggleLink';
+import NextLink from "components/reuseable/links/NextLink";
+import SocialLinks from "components/reuseable/SocialLinks";
+import ListItemLink from "components/reuseable/links/ListItemLink";
+import DropdownToggleLink from "components/reuseable/links/DropdownToggleLink";
 // -------- data -------- //
-import { blogsNavigation, demos, pages, projectsNavigation } from 'data/navigation';
+import {
+  blogsNavigation,
+  demos,
+  pages,
+  projectsNavigation,
+} from "data/navigation";
 
 // ===================================================================
 type Navbar3Props = {
@@ -29,20 +34,39 @@ const Navbar3: FC<Navbar3Props> = ({ navClassName, logoAlt, stickyBox }) => {
   // render inner nav item links
   const renderLinks = (links: LinkType[]) => {
     return links.map((item) => (
-      <ListItemLink href={item.url} title={item.title} linkClassName="dropdown-item" key={item.id} />
+      <ListItemLink
+        href={item.url}
+        title={item.title}
+        linkClassName="dropdown-item"
+        key={item.id}
+      />
     ));
   };
 
   const logos = (
     <>
-      <img className="logo-dark" src={`/img/${logoAlt}.png`} srcSet={`/img/${logoAlt}@2x.png 2x`} alt={logoAlt} />
-      <img className="logo-light" src="/img/logo-light.png" srcSet="/img/logo-light@2x.png 2x" alt="logo-light" />
+      <img
+        className="logo-dark"
+        src={`/img/${logoAlt}.png`}
+        srcSet={`/img/${logoAlt}@2x.png 2x`}
+        alt={logoAlt}
+      />
+      <img
+        className="logo-light"
+        src="/img/logo-light.png"
+        srcSet="/img/logo-light@2x.png 2x"
+        alt="logo-light"
+      />
     </>
   );
 
   return (
     <Fragment>
-      {stickyBox && <div style={{ paddingTop: sticky ? navbarRef.current?.clientHeight : 0 }} />}
+      {stickyBox && (
+        <div
+          style={{ paddingTop: sticky ? navbarRef.current?.clientHeight : 0 }}
+        />
+      )}
 
       <nav ref={navbarRef} className={sticky ? fixedClassName : navClassName}>
         <div className="container justify-content-between align-items-center">
@@ -73,7 +97,11 @@ const Navbar3: FC<Navbar3Props> = ({ navClassName, logoAlt, stickyBox }) => {
               className="navbar-collapse offcanvas offcanvas-nav offcanvas-start"
             >
               <div className="offcanvas-header mx-lg-auto order-0 order-lg-1 d-lg-flex px-lg-15">
-                <NextLink href="/" className="transition-none d-none d-lg-flex" title={logos} />
+                <NextLink
+                  href="/"
+                  className="transition-none d-none d-lg-flex"
+                  title={logos}
+                />
                 <h3 className="text-white fs-30 mb-0 d-lg-none">Sandbox</h3>
                 <button
                   type="button"
@@ -87,7 +115,10 @@ const Navbar3: FC<Navbar3Props> = ({ navClassName, logoAlt, stickyBox }) => {
                 <div className="navbar-nav ms-lg-auto">
                   {/* ===================== demos nav item ===================== */}
                   <li className="nav-item dropdown dropdown-mega">
-                    <DropdownToggleLink title="Demos" className="nav-link dropdown-toggle" />
+                    <DropdownToggleLink
+                      title="Demos"
+                      className="nav-link dropdown-toggle"
+                    />
 
                     <ul className="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
                       <li className="mega-menu-content mega-menu-scroll">
@@ -120,32 +151,49 @@ const Navbar3: FC<Navbar3Props> = ({ navClassName, logoAlt, stickyBox }) => {
 
                   {/*  ===================== pages nav item  ===================== */}
                   <li className="nav-item dropdown">
-                    <DropdownToggleLink title="Pages" className="nav-link dropdown-toggle" />
+                    <DropdownToggleLink
+                      title="Pages"
+                      className="nav-link dropdown-toggle"
+                    />
 
                     <ul className="dropdown-menu">
                       {pages.map(({ id, title, children }) => {
                         return (
-                          <li className="dropdown dropdown-submenu dropend" key={id}>
+                          <li
+                            className="dropdown dropdown-submenu dropend"
+                            key={id}
+                          >
                             <DropdownToggleLink title={title} />
-                            <ul className="dropdown-menu">{renderLinks(children)}</ul>
+                            <ul className="dropdown-menu">
+                              {renderLinks(children)}
+                            </ul>
                           </li>
                         );
                       })}
 
-                      <ListItemLink href="/pricing" title="Pricing" linkClassName="dropdown-item" />
+                      <ListItemLink
+                        href="/pricing"
+                        title="Pricing"
+                        linkClassName="dropdown-item"
+                      />
                     </ul>
                   </li>
 
                   {/* ===================== projects nav item  ===================== */}
                   <li className="nav-item dropdown">
-                    <DropdownToggleLink title="Projects" className="nav-link dropdown-toggle" />
+                    <DropdownToggleLink
+                      title="Projects"
+                      className="nav-link dropdown-toggle"
+                    />
 
                     <div className="dropdown-menu dropdown-lg">
                       <div className="dropdown-lg-content">
                         {projectsNavigation.map(({ title, children }, i) => (
                           <div key={title + i}>
                             <h6 className="dropdown-header">{title}</h6>
-                            <ul className="list-unstyled">{renderLinks(children)}</ul>
+                            <ul className="list-unstyled">
+                              {renderLinks(children)}
+                            </ul>
                           </div>
                         ))}
                       </div>
@@ -158,57 +206,102 @@ const Navbar3: FC<Navbar3Props> = ({ navClassName, logoAlt, stickyBox }) => {
                 <div className="navbar-nav me-lg-auto">
                   {/* ===================== blog nav item ===================== */}
                   <li className="nav-item dropdown">
-                    <DropdownToggleLink title="Blog" className="nav-link dropdown-toggle" />
+                    <DropdownToggleLink
+                      title="Blog"
+                      className="nav-link dropdown-toggle"
+                    />
 
                     <ul className="dropdown-menu">
                       {blogsNavigation.map(({ id, url, title, children }) => {
                         if (!url && children) {
                           return (
-                            <li className="dropdown dropdown-submenu dropend" key={id}>
+                            <li
+                              className="dropdown dropdown-submenu dropend"
+                              key={id}
+                            >
                               <DropdownToggleLink title="Blog Posts" />
-                              <ul className="dropdown-menu">{renderLinks(children)}</ul>
+                              <ul className="dropdown-menu">
+                                {renderLinks(children)}
+                              </ul>
                             </li>
                           );
                         }
-                        return <ListItemLink key={id} href={url} title={title} linkClassName="dropdown-item" />;
+                        return (
+                          <ListItemLink
+                            key={id}
+                            href={url}
+                            title={title}
+                            linkClassName="dropdown-item"
+                          />
+                        );
                       })}
                     </ul>
                   </li>
 
                   {/* ===================== block item ===================== */}
                   <li className="nav-item dropdown">
-                    <DropdownToggleLink title="Blocks" className="nav-link dropdown-toggle" />
+                    <DropdownToggleLink
+                      title="Blocks"
+                      className="nav-link dropdown-toggle"
+                    />
 
                     <ul className="dropdown-menu">
                       {blogsNavigation.map(({ id, url, title, children }) => {
                         if (!url && children) {
                           return (
-                            <li className="dropdown dropdown-submenu dropend" key={id}>
+                            <li
+                              className="dropdown dropdown-submenu dropend"
+                              key={id}
+                            >
                               <DropdownToggleLink title="Blog Posts" />
-                              <ul className="dropdown-menu">{renderLinks(children)}</ul>
+                              <ul className="dropdown-menu">
+                                {renderLinks(children)}
+                              </ul>
                             </li>
                           );
                         }
-                        return <ListItemLink key={id} href={url} title={title} linkClassName="dropdown-item" />;
+                        return (
+                          <ListItemLink
+                            key={id}
+                            href={url}
+                            title={title}
+                            linkClassName="dropdown-item"
+                          />
+                        );
                       })}
                     </ul>
                   </li>
 
                   {/* ===================== block item ===================== */}
                   <li className="nav-item dropdown">
-                    <DropdownToggleLink title="Documentation" className="nav-link dropdown-toggle" />
+                    <DropdownToggleLink
+                      title="Documentation"
+                      className="nav-link dropdown-toggle"
+                    />
 
                     <ul className="dropdown-menu">
                       {blogsNavigation.map(({ id, url, title, children }) => {
                         if (!url && children) {
                           return (
-                            <li className="dropdown dropdown-submenu dropend" key={id}>
+                            <li
+                              className="dropdown dropdown-submenu dropend"
+                              key={id}
+                            >
                               <DropdownToggleLink title="Blog Posts" />
-                              <ul className="dropdown-menu">{renderLinks(children)}</ul>
+                              <ul className="dropdown-menu">
+                                {renderLinks(children)}
+                              </ul>
                             </li>
                           );
                         }
-                        return <ListItemLink key={id} href={url} title={title} linkClassName="dropdown-item" />;
+                        return (
+                          <ListItemLink
+                            key={id}
+                            href={url}
+                            title={title}
+                            linkClassName="dropdown-item"
+                          />
+                        );
                       })}
                     </ul>
                   </li>
@@ -219,9 +312,16 @@ const Navbar3: FC<Navbar3Props> = ({ navClassName, logoAlt, stickyBox }) => {
               <div className="offcanvas-body d-lg-none order-4 mt-auto">
                 <div className="offcanvas-footer">
                   <div>
-                    <NextLink title="info@email.com" className="link-inverse" href="mailto:first.last@email.com" />
+                    <NextLink
+                      title="info1@email.com"
+                      className="link-inverse"
+                      href="mailto:first.last@email.com"
+                    />
                     <br />
-                    <NextLink href="tel:0123456789" title="00 (123) 456 78 90" />
+                    <NextLink
+                      href="tel:0123456789"
+                      title="00 (123) 456 78 90"
+                    />
                     <br />
                     <SocialLinks />
                   </div>
@@ -238,7 +338,8 @@ const Navbar3: FC<Navbar3Props> = ({ navClassName, logoAlt, stickyBox }) => {
 // set deafult Props
 Navbar3.defaultProps = {
   stickyBox: true,
-  navClassName: 'navbar navbar-expand-lg center-logo transparent position-absolute navbar-dark'
+  navClassName:
+    "navbar navbar-expand-lg center-logo transparent position-absolute navbar-dark",
 };
 
 export default Navbar3;
