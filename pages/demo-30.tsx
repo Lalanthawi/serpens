@@ -3,7 +3,7 @@ import { NextPage } from "next";
 import { Ads1 } from "components/blocks/Ads";
 import { Hero30 } from "components/blocks/hero";
 import { About31 } from "components/blocks/about";
-import { Navbar } from "components/blocks/navbar";
+import { Navbar, Navbar3, Navbar4 } from "components/blocks/navbar";
 import { Facts19 } from "components/blocks/facts";
 import { Footer20 } from "components/blocks/footer";
 import { Pricing11 } from "components/blocks/pricing";
@@ -31,7 +31,7 @@ const Demo30: NextPage = () => {
         </div>
 
         {/* ========== navbar section ========== */}
-        <Navbar social />
+        <Navbar social></Navbar>
       </header>
 
       {/* ========== main content ========== */}

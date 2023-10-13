@@ -56,7 +56,7 @@ const Footer20: FC = () => {
 
                 <p className="mb-5">
                   Let's make something great together. We are trusted by over
-                  5000+ clients. Join them by using our services and grow your
+                  100+ clients. Join them by using our services and grow your
                   business.
                 </p>
                 <p className="mb-1">

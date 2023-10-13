@@ -1,17 +1,18 @@
-import { FC } from 'react';
-import NextLink from 'components/reuseable/links/NextLink';
+import { FC } from "react";
+import NextLink from "components/reuseable/links/NextLink";
 // -------- data -------- //
-import { services } from 'data/demo-30';
+import { services } from "data/demo-30";
 
 const Services32: FC = () => {
   return (
     <div className="container pt-6">
       <div className="row">
         <div className="col-md-11 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center">
-          <h2 className="display-2 mb-4">The full service we are offering</h2>
+          <h2 className="display-2 mb-4">Solutions that we are offer</h2>
           <p className="lead fs-lg mb-11">
-            Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Integer posuere ante
-            venenatis.
+            Explore our comprehensive range of services, from full-stack
+            development to tailored web solutions, designed to meet all your
+            digital needs in one place.
           </p>
         </div>
       </div>
@@ -26,7 +27,9 @@ const Services32: FC = () => {
             <h3>{title}</h3>
 
             <p className="mb-3">
-              Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.
+              Elevate your online presence with our expert web design services,
+              where creativity meets cutting-edge technology for visually
+              stunning and user-friendly websites
             </p>
 
             <NextLink title="Learn More" href="#" className="more hover" />
